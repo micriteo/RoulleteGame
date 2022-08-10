@@ -6,6 +6,15 @@ import styled from 'styled-components'
 
 class Roulette extends Component{
 
+    state ={
+        roll : false
+    }
+
+    roll = () => {
+        var current = this.state.roll;
+        this.setState({roll: current ? false : true})
+    }
+
     render(){
 
         var Title = styled.h1`
@@ -17,12 +26,11 @@ class Roulette extends Component{
         
         `
 
-
         return(
             <div>
                 <Title>ROULETTE</Title>
-                <Wheel/>
-                <button>Roll</button>
+                <Wheel roll={this.state.roll}/>
+                <button onClick={this.roll}>Roll</button>
             </div>
         )
     }
