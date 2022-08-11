@@ -3,7 +3,7 @@ import  {Component} from 'react'
 import  styled from 'styled-components'
 import Number from './number'
 import Line from './line'
-import{animated, Spring, useSpring} from 'react-spring'
+import{animated, config, useSpring} from 'react-spring'
 
 function Wheel(props){
 
@@ -15,12 +15,14 @@ function Wheel(props){
         for(var x = 0; x < 5; x++){
             for(var i = 0; i < 15; i++){
                 if(i == 7){
-                    numbers.push({color: 'green', number:15}) //15 is the number of the 0
+                    numbers.push({color: 'green', number:0}) //15 is the number of the 0
+                }else{
+                    numbers.push ({
+                        color: (i % 2 == 0) ? 'black' : 'red',   //if i is even, color is black, else color is red
+                        number: (i % 2 == 0) ? 15 - i : i
+                    });
                 }
-                numbers.push ({
-                    color: (i % 2 == 0) ? 'black' : 'red',   //if i is even, color is black, else color is red
-                    number: (i % 2 == 0) ? 14 - i : i
-                });
+                
             }
         }
 
@@ -35,10 +37,16 @@ function Wheel(props){
 
          const rollAnimation = useSpring({  //useSpring is a library that allows you to create animations in javascript
              to: {marginLeft: '0px'},
-             from:  {marginLeft: '-10000px'},
+             from:  {marginLeft: '-3000px'},
              reset: true,
              immediate: props.roll,
-
+             delay: 0,
+             config:{
+                mass : 1,
+                tension: 100,
+                friction: 200
+             },
+             onRest: props.done
          })
 
       // const rollAnimation = useSpring({  //useSpring is a library that allows you to create animations in javascript
@@ -68,7 +76,7 @@ function Wheel(props){
             //         <Number color ='black' number='7'/>
             //     </div> */}
 
-            // </Container>
+                 </Container>
             )
     }
 

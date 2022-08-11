@@ -1,13 +1,28 @@
 import React from 'react'
 import  {Component} from 'react'
-import Wheel from './wheel'
 import styled from 'styled-components'
+
+import Wheel from './wheel'
+import Countdown from './countdown'
+import Bets from './bets'
 
 
 class Roulette extends Component{
 
     state ={
-        roll : false
+        roll : true,
+        count : false
+    }
+
+    componentDidMount(){
+    }
+
+    countdownDone = () => {
+        this.setState({roll: false, count: true});
+    }
+
+    rollDone = () => {
+        this.setState({roll: true, count: false});
     }
 
     roll = () => {
@@ -29,8 +44,10 @@ class Roulette extends Component{
         return(
             <div>
                 <Title>ROULETTE</Title>
-                <Wheel roll={this.state.roll}/>
-                <button onClick={this.roll}>Roll</button>
+                <Countdown time={10} count={this.state.count} done={this.countdownDone}/>
+                <Wheel roll={this.state.roll} done={this.rollDone}/>
+                {/* <button onClick={this.roll}>Roll</button> */}
+                <Bets/>
             </div>
         )
     }

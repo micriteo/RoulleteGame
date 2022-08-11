@@ -12,7 +12,6 @@ class GameContainer extends Component{
 
         var Container = styled.div`
 
-           color : green;
            position: absolute;
            top : 10%;
            left : 25%;
