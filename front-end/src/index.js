@@ -1,14 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import reportWebVitals from './reportWebVitals';
-import GameContainer from './components/game_container'
+import React from "react";
+import { createRoot } from "react-dom/client";
+import Roulette from "./pages/Roulette";
 
-ReactDOM.render(
-  <React.Fragment>
-    <GameContainer/>
-  </React.Fragment>,
-  document.getElementById('root')
-);
-
-
-reportWebVitals();
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<Roulette />);

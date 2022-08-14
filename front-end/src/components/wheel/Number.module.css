@@ -1,0 +1,16 @@
+.container {
+  width: 90px;
+  height: 90px;
+  border: black 1px solid;
+  margin: 5px 1px 0px 0px;
+  display: inline-block;
+}
+
+.text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 1.5rem;
+  font-size: 48px;
+}

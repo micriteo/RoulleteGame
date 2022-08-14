@@ -1,0 +1,17 @@
+.container {
+  display: table-cell;
+}
+
+.table {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+}
+
+.text {
+  text-align: center;
+  border-left: 1px solid #000;
+}
