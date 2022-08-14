@@ -14,8 +14,8 @@ function Wheel(props){
 
         for(var x = 0; x < 5; x++){
             for(var i = 0; i < 15; i++){
-                if(i == 7){
-                    numbers.push({color: 'green', number:0}) //15 is the number of the 0
+                if(i == 0){
+                    numbers.push({color: 'green', number: 0}) //15 is the number of the 0
                 }else{
                     numbers.push ({
                         color: (i % 2 == 0) ? 'black' : 'red',   //if i is even, color is black, else color is red
@@ -41,12 +41,12 @@ function Wheel(props){
              reset: true,
              immediate: props.roll,
              delay: 0,
-             config:{
-                mass : 1,
+             config: {
+                mass: 1,
                 tension: 100,
                 friction: 200
              },
-             onRest: props.done
+              onRest: props.done
          })
 
       // const rollAnimation = useSpring({  //useSpring is a library that allows you to create animations in javascript

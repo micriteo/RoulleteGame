@@ -8,7 +8,7 @@ class GameContainer extends Component{
 
 
 
-    render() {
+    render(){
 
         var Container = styled.div`
 
@@ -27,4 +27,4 @@ class GameContainer extends Component{
     }
 }
 
-export default GameContainer;
+export default GameContainer

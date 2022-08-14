@@ -5,11 +5,12 @@ import styled from 'styled-components'
 import Wheel from './wheel'
 import Countdown from './countdown'
 import Bets from './bets'
+import Input from './input'
 
 
 class Roulette extends Component{
 
-    state ={
+    state = {
         roll : true,
         count : false
     }
@@ -34,11 +35,9 @@ class Roulette extends Component{
 
         var Title = styled.h1`
         
-            font-size: 5em;
+            font-size: 5rem;
             text-align: center;
 
-        
-        
         `
 
         return(
@@ -46,8 +45,9 @@ class Roulette extends Component{
                 <Title>ROULETTE</Title>
                 <Countdown time={10} count={this.state.count} done={this.countdownDone}/>
                 <Wheel roll={this.state.roll} done={this.rollDone}/>
-                {/* <button onClick={this.roll}>Roll</button> */}
+                <Input/>
                 <Bets/>
+                {/* <button onClick={this.roll}>Roll</button> */}
             </div>
         )
     }

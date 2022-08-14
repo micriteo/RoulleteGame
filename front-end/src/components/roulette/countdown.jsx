@@ -13,7 +13,7 @@ function Countdown(props){
         config: {
             duration: props.time * 1000
         },
-        onRest: props.done
+         onRest: props.done
     })
 
     const CountdownTitle = styled.p`
@@ -42,4 +42,4 @@ function Countdown(props){
 }
 
 
-export default Countdown;
+export default Countdown

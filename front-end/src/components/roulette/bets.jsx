@@ -11,16 +11,13 @@ class Bets extends Component{
     render(){
         return (
             
-            <div>
-
-            <BetTable color='red'/>
-            <BetTable color='black'/>
-            <BetTable color='green'/>
-
+            <div style={{display: 'table', width: '100%'}}>
+                <div style={{display: 'table-row'}}>
+                <BetTable color='RED'/>
+                <BetTable color='GREEN'/>
+                <BetTable color='BLACK'/>    
+                </div>
             </div>
-
-
-
         )
     }
 }
