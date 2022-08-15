@@ -4,6 +4,10 @@
 
 .table {
   width: 100%;
+  display: grid;
+  gap: 11rem;
+  margin-left: 1rem;
+  grid-template-columns: 22% 22% 22%;
 }
 
 .title {

@@ -1,23 +1,21 @@
-import BetTable from "./Bets";
+import BetTable from "./BetTable";
+import styles from "./BetTable.module.css";
 
 const Bets = () => {
   return (
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            test
-            {/* <BetTable color="RED" /> */}
-          </td>
-          {/* <td>
-          <BetTable color="GREEN" />
-        </td>
-        <td>
-          <BetTable color="BLACK" />
-        </td> */}
-        </tr>
-      </tbody>
-    </table>
+    // <table>
+    //   <tbody>
+    //     <tr>
+          <div className={styles.table}>
+          <div className={styles.tablerow}>
+
+          <BetTable color="Red" />
+          <BetTable color="Black" />
+          <BetTable color="Green" />
+
+          </div>
+          </div>
+   
   );
 };
 

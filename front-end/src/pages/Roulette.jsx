@@ -30,8 +30,8 @@ const Roulette = () => {
       <div className={styles.title}>ROULETTE</div>
       <Countdown count={count} done={countdownDone} />
       <Wheel roll={updateRoll} done={rollDone} />
-      <Input />
-      <Bets />
+      <Input/>
+      <Bets/>
     </div>
   );
 };
