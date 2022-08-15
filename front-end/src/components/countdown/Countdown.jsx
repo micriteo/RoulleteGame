@@ -15,10 +15,9 @@ const Countdown = ({ count, done }) => {
 
   return (
     <div className={styles.container}>
-      Rolling in
-      <animated.span>
-        {countdown.number.interpolate((number) => number.toFixed(2))}
-      </animated.span>
+      Rolling in <animated.span>
+     {countdown.number.interpolate((number) => number.toFixed(2))}
+                </animated.span>
     </div>
   );
 };
