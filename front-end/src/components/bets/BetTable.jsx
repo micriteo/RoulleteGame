@@ -1,6 +1,8 @@
 import styles from "./BetTable.module.css";
+import Roulette from "../../pages/Roulette";
 
-const BetTable = ({ color, amount }) => {
+const BetTable = ({ color }) => {
+  const bets = getBets();
     return(
     // <div className={styles.container}>
       <div className={styles.container}>

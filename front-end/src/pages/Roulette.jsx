@@ -7,7 +7,7 @@ import Input from "../components/input/Input";
 
 import styles from "./Roulette.module.css";
 
-const Roulette = () => {
+const Roulette = ({name, amount}) => {
   const [roll, setRoll] = useState(true);
   const [count, setCount] = useState(10); 
   // const [bets, setBets] = useState({ red: [{name: 'test' , amount: '400$'}],   green: [],black: []});
