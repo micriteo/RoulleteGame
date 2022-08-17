@@ -1,16 +1,16 @@
 import styles from "./BetTable.module.css";
 
-const BetTable = ({ color }) => {
+const BetTable = ({ color, amount }) => {
     return(
     // <div className={styles.container}>
       <div className={styles.container}>
           <div className={styles.title}>{color}</div>
           <hr/>
           <div className={styles.table}>
-            {Bets.map((bet) => (
+            {Bets.map((bets) => (
             <tr>
-              <td><div className={styles.text}>{bet.name}</div></td>
-              <td><div className={styles.text}>{bet.amount}$</div></td>
+              <td><div className={styles.text}>{bets.name}</div></td>
+              <td><div className={styles.text}>{bets.amount}$</div></td>
             </tr>
             ))}
         </div>
