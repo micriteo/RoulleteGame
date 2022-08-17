@@ -13,7 +13,6 @@ const Bets = () => {
               <BetTable color='BLACK' bets={Bets.black}/>
           </div>
         </div>
-   
   );
 };
 

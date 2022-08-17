@@ -1,4 +1,3 @@
-import Bets from "./Bets";
 import styles from "./BetTable.module.css";
 
 const BetTable = ({ color }) => {
@@ -16,13 +15,7 @@ const BetTable = ({ color }) => {
             ))}
         </div>
       </div>
-  // <div className={styles.container}>
-  //   <tr>
-  //       <td>Test</td>
-  //       <td>400$</td>
-  //   </tr>
-  //   </div>
   );
 };
 
-export default BetTable;
+export default BetTable; // export default Bets;
