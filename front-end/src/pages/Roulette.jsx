@@ -9,7 +9,12 @@ import styles from "./Roulette.module.css";
 
 const Roulette = () => {
   const [roll, setRoll] = useState(true);
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(10); 
+  const [bets, setBets] = useState({ red: [{name: 'test' , amount: '400$'}],   green: [],black: []});
+
+  const handleRoll = () => {
+    setBets(true);
+  }
 
   const countdownDone = () => {
     setRoll(false);
@@ -31,7 +36,7 @@ const Roulette = () => {
       <Countdown count={count} done={countdownDone} />
       <Wheel roll={updateRoll} done={rollDone} />
       <Input/>
-      <Bets/>
+      <Bets bets={handleRoll}/>
     </div>
   );
 };

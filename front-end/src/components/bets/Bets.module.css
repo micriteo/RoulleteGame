@@ -1,11 +1,10 @@
 .table {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: table;
+  width:   100%;
 }
 
 .tablerow {
   display: table-row;
-  gap : 4rem;
 }
 
 

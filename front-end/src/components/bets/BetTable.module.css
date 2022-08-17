@@ -1,21 +1,24 @@
 .container {
   display: table-cell;
 }
-
-.table {
+.table{
   width: 100%;
-  display: grid;
-  gap: 11rem;
-  margin-left: 1rem;
-  grid-template-columns: 22% 22% 22%;
 }
-
-.title {
+.title{
   text-align: center;
   font-size: 18px;
+  padding-bottom : 1rem;
 }
 
-.text {
+.text{
   text-align: center;
-  border-left: 1px solid #000;
+  /* border-left: 1px solid black; */
+}
+/* td:nth-child(1){
+  border: none;
+  border-right: 1px solid black;
+} */
+td{
+  width: 10%;
+  text-align: center;
 }
